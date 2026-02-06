@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" spacing="20" style="-fx-padding: 20; -fx-background-color: white;"
+      xmlns="http://javafx.com/javafx/17" fx:controller="org.example.assetmanager.view.MainController">
+
+    <Label text="Zarządzanie Lokalizacjami" style="-fx-font-size: 24; -fx-font-weight: bold;"/>
+
+    <HBox spacing="10">
+        <TextField fx:id="locationInput" promptText="Wpisz nazwę lokalizacji..." HBox.hgrow="ALWAYS"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Button text="Dodaj nową" onAction="#handleAddLocation" styleClass="btn-success"/>
+        <Button text="Zapisz zmianę nazwy" onAction="#handleUpdateLocation" styleClass="btn-red"/>
+    </HBox>
+
+    <Label text="Dostępne lokalizacje:" style="-fx-text-fill: gray;"/>
+
+    <ListView fx:id="locationListView" VBox.vgrow="ALWAYS"/>
+
+    <Button text="Usuń zaznaczoną" onAction="#handleDeleteLocation" styleClass="btn-red"/>
+
+</VBox>

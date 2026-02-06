@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" spacing="20" style="-fx-padding: 30; -fx-background-color: #ecf0f1;"
+      xmlns="http://javafx.com/javafx/17.0.12" fx:controller="org.example.assetmanager.view.MainController">
+
+    <HBox alignment="CENTER_LEFT" spacing="20">
+        <Label text="Pulpit Zarządzania" style="-fx-font-size: 26; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+
+        <Region HBox.hgrow="ALWAYS"/>
+        <HBox spacing="10">
+            <Button fx:id="btnYear" text="W tym roku" onAction="#filterYear" prefHeight="30" prefWidth="120"/>
+            <Button fx:id="btnMonth" text="W tym miesiącu" onAction="#filterMonth" prefHeight="30" prefWidth="120"/>
+            <Button fx:id="btnAll" text="Od początku" onAction="#filterAll" prefHeight="30" prefWidth="120"/>
+        </HBox>
+    </HBox>
+
+    <HBox spacing="20">
+        <VBox style="-fx-background-color: #3498db; -fx-padding: 20; -fx-background-radius: 5;" HBox.hgrow="ALWAYS">
+            <Label text="Liczba zakupionych przedmiotów" style="-fx-text-fill: white; -fx-font-size: 16;"/>
+            <Label text="0" fx:id="totalItemsLabel"
+                   style="-fx-text-fill: white; -fx-font-size: 40; -fx-font-weight: bold;"/>
+        </VBox>
+
+        <VBox style="-fx-background-color: #e67e22; -fx-padding: 20; -fx-background-radius: 5;" HBox.hgrow="ALWAYS">
+            <Label text="Wartość zakupów w tym okresie" style="-fx-text-fill: white; -fx-font-size: 16;"/>
+            <Label text="0 PLN" fx:id="totalValueLabel"
+                   style="-fx-text-fill: white; -fx-font-size: 40; -fx-font-weight: bold;"/>
+        </VBox>
+    </HBox>
+
+    <Separator/>
+
+    <HBox spacing="20" VBox.vgrow="ALWAYS">
+        <VBox style="-fx-background-color: white; -fx-background-radius: 5; -fx-padding: 10;" HBox.hgrow="ALWAYS">
+            <Label text="Struktura wydatków w wybranym okresie"
+                   style="-fx-font-size: 16; -fx-font-weight: bold; -fx-padding: 10;"/>
+            <PieChart fx:id="categoryPieChart"/>
+        </VBox>
+    </HBox>
+</VBox>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<ScrollPane xmlns:fx="http://javafx.com/fxml/1" fitToWidth="true" style="-fx-background-color: white;"
+            xmlns="http://javafx.com/javafx/17.0.12" fx:controller="org.example.assetmanager.view.MainController">
+    <content>
+        <VBox spacing="20" style="-fx-padding: 40; -fx-background-color: white;">
+
+            <HBox alignment="CENTER_LEFT">
+                <Label text="Szczegóły Zasobu"
+                       style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button text="Powrót do listy" onAction="#goBack"
+                        style="-fx-background-color: #95a5a6; -fx-text-fill: white;"/>
+            </HBox>
+
+            <Separator/>
+
+            <GridPane hgap="20" vgap="15">
+                <columnConstraints>
+                    <ColumnConstraints prefWidth="150" halignment="RIGHT"/>
+                    <ColumnConstraints prefWidth="300"/>
+                </columnConstraints>
+
+                <Label text="Nazwa:" style="-fx-font-weight: bold; -fx-text-fill: #7f8c8d;" GridPane.rowIndex="0"
+                       GridPane.columnIndex="0"/>
+                <Label fx:id="detailName" text="..." style="-fx-font-size: 16;" GridPane.rowIndex="0"
+                       GridPane.columnIndex="1"/>
+
+                <Label text="Kategoria:" style="-fx-font-weight: bold; -fx-text-fill: #7f8c8d;" GridPane.rowIndex="1"
+                       GridPane.columnIndex="0"/>
+                <Label fx:id="detailCategory" text="..." style="-fx-font-size: 16;" GridPane.rowIndex="1"
+                       GridPane.columnIndex="1"/>
+
+                <Label text="Lokalizacja:" style="-fx-font-weight: bold; -fx-text-fill: #7f8c8d;" GridPane.rowIndex="2"
+                       GridPane.columnIndex="0"/>
+                <Label fx:id="detailLocation" text="..." style="-fx-font-size: 16;" GridPane.rowIndex="2"
+                       GridPane.columnIndex="1"/>
+
+                <Label text="Ilość sztuk:" style="-fx-font-weight: bold; -fx-text-fill: #7f8c8d;" GridPane.rowIndex="3"
+                       GridPane.columnIndex="0"/>
+                <Label fx:id="detailAmount" text="..." style="-fx-font-size: 16;" GridPane.rowIndex="3"
+                       GridPane.columnIndex="1"/>
+
+                <Label text="Cena jednostkowa:" style="-fx-font-weight: bold; -fx-text-fill: #7f8c8d;"
+                       GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                <Label fx:id="detailPrice" text="..." style="-fx-font-size: 16;" GridPane.rowIndex="4"
+                       GridPane.columnIndex="1"/>
+
+                <Label text="Data Zakupu:" style="-fx-font-weight: bold; -fx-text-fill: #2980b9;" GridPane.rowIndex="5"
+                       GridPane.columnIndex="0"/>
+                <Label fx:id="detailDate" text="..." style="-fx-font-size: 16; -fx-font-weight: bold;"
+                       GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+                <Label text="Gwarancja (m-ce):" style="-fx-font-weight: bold; -fx-text-fill: #2980b9;"
+                       GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+                <Label fx:id="detailWarranty" text="..." style="-fx-font-size: 16; -fx-font-weight: bold;"
+                       GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+                <Label text="WARTOŚĆ CAŁKOWITA:" style="-fx-font-weight: bold; -fx-text-fill: #27ae60;"
+                       GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+                <Label fx:id="detailTotalValue" text="..."
+                       style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #27ae60;" GridPane.rowIndex="7"
+                       GridPane.columnIndex="1"/>
+            </GridPane>
+
+            <Separator/>
+
+            <Label text="Zdjęcie / Paragon:" style="-fx-text-fill: gray;"/>
+
+            <VBox alignment="CENTER" style="-fx-border-color: #bdc3c7; -fx-border-style: dashed; -fx-padding: 10;">
+                <ImageView fx:id="detailImageView" fitWidth="500.0" preserveRatio="true"/>
+                <Label fx:id="noImageLabel" text="Brak zdjęcia" style="-fx-text-fill: silver;"/>
+            </VBox>
+
+            <Region prefHeight="20"/>
+
+        </VBox>
+    </content>
+</ScrollPane>

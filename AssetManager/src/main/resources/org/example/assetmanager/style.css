@@ -1,0 +1,64 @@
+/* menu boczne */
+.sidebar-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 0 0 0 20;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1); /* Lekkie podświetlenie po najechaniu */
+}
+
+.sidebar-button.active {
+    -fx-background-color: #34495e;
+    -fx-font-weight: bold;
+    -fx-border-color: white;
+    -fx-border-width: 0 0 0 4; /* Biały pasek z lewej strony */
+}
+
+/* przyciski filtrów */
+.filter-button {
+    -fx-background-color: #bdc3c7;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-font-weight: normal;
+}
+
+.filter-button:hover {
+    -fx-background-color: #95a5a6;
+}
+
+.filter-button.active {
+    -fx-background-color: #2980b9;
+    -fx-font-weight: bold;
+}
+
+.btn-success {
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.btn-red {
+    -fx-background-color: #f33b12;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+
+.chart-legend {
+    -fx-background-color: transparent;
+    -fx-padding: 20px;
+}
+
+.chart-legend-item {
+    -fx-font-size: 14px;
+    -fx-text-fill: #2c3e50;
+}
+
+.chart-legend-item-symbol {
+    -fx-background-radius: 50%;
+}

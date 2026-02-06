@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" spacing="10" style="-fx-padding: 20; -fx-background-color: white;"
+      xmlns="http://javafx.com/javafx/17" fx:controller="org.example.assetmanager.view.MainController">
+
+    <Label text="Lista Przedmiotów" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="🔍 Szukaj:" style="-fx-font-weight: bold;"/>
+        <TextField fx:id="searchField" promptText="Wpisz nazwę lub kategorię..." HBox.hgrow="ALWAYS"/>
+    </HBox>
+    <TableView fx:id="table" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="nameColumn" text="Nazwa" prefWidth="200"/>
+            <TableColumn fx:id="categoryColumn" text="Kategoria" prefWidth="150"/>
+            <TableColumn fx:id="locationColumn" text="Lokalizacja" prefWidth="120"/>
+            <TableColumn fx:id="amountColumn" text="Ilość" prefWidth="80"/>
+            <TableColumn fx:id="valueColumn" text="Wartość (szt)" prefWidth="100"/>
+            <TableColumn fx:id="warrantyColumn" text="Koniec Gwarancji" prefWidth="120"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Szczegóły" onAction="#showDetails"/>
+        <Button text="Edytuj" onAction="#handleEdit"/>
+        <Button text="Usuń" onAction="#handleDelete" styleClass="btn-red"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button text="+ Dodaj Nowy" onAction="#showAddForm" styleClass="btn-success"/>
+    </HBox>
+
+    <HBox spacing="20" style="-fx-background-color: #ecf0f1; -fx-padding: 10; -fx-background-radius: 5;">
+
+        <VBox minWidth="100">
+            <Label text="Łączna wartość:" style="-fx-font-size: 10; -fx-text-fill: #7f8c8d;"/>
+            <Label fx:id="viewTotalLabel" text="0.00 PLN"
+                   style="-fx-font-weight: bold; -fx-font-size: 14; -fx-text-fill: #2c3e50;"/>
+        </VBox>
+
+        <Separator orientation="VERTICAL"/>
+
+        <VBox HBox.hgrow="ALWAYS">
+            <Label text="Zbliżający się koniec gwarancji:"
+                   style="-fx-font-size: 10; -fx-font-weight: bold; -fx-text-fill: #e67e22;"/>
+            <Label fx:id="upcoming1Label" text="" style="-fx-font-size: 11;"/>
+            <Label fx:id="upcoming2Label" text="" style="-fx-font-size: 11;"/>
+            <Label fx:id="upcoming3Label" text="" style="-fx-font-size: 11;"/>
+        </VBox>
+
+        <Separator orientation="VERTICAL"/>
+
+        <VBox HBox.hgrow="ALWAYS">
+            <Label text="Ostatnio wygasłe:" style="-fx-font-size: 10; -fx-font-weight: bold; -fx-text-fill: #c0392b;"/>
+            <Label fx:id="expired1Label" text="" style="-fx-font-size: 11; -fx-text-fill: gray;"/>
+            <Label fx:id="expired2Label" text="" style="-fx-font-size: 11; -fx-text-fill: gray;"/>
+            <Label fx:id="expired3Label" text="" style="-fx-font-size: 11; -fx-text-fill: gray;"/>
+        </VBox>
+
+    </HBox>
+
+</VBox>
