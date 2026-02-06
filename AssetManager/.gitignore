@@ -36,3 +36,11 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+/dist
+/build
+/target
+/docs
+/out
+*.class
+*.jar

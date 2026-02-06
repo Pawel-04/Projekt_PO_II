@@ -1,6 +1,0 @@
-module:org.example.assetmanager
-org.example.assetmanager
-org.example.assetmanager.entity
-org.example.assetmanager.managers
-org.example.assetmanager.util
-org.example.assetmanager.view
