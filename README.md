@@ -1,4 +1,4 @@
-# Projekt\_PO\_II
+# **Projekt\_PO\_II**
 
 Praca projektowa pt.: "System zarządzania majątkiem prywatnym i sprzętem firmowym".
 
@@ -6,39 +6,36 @@ Praca projektowa pt.: "System zarządzania majątkiem prywatnym i sprzętem firm
 
 Projekt realizowany w ramach przedmiotu Programowanie Obiektowe II.
 
+## Budowanie aplikacji
 
+Aby zbudować aplikację:
 
-\## Instrukcja uruchomienia aplikacji
-
-
-
-Zgodnie z dokumentacją projektową, aplikacja jest już zbudowana i gotowa do uruchomienia z folderu docelowego.
-
-
-
-\### Kroki do uruchomienia:
-
-
-
-1\.  \*\*Przejdź do katalogu `/target`\*\*
-
-&nbsp;   Katalog ten został utworzony automatycznie w głównym folderze projektu.
-
-
-
-2\.  \*\*Znajdź plik wykonywalny\*\*
-
-&nbsp;   W folderze `target` odszukaj plik o nazwie:
-
-&nbsp;   `AssetManager.exe`
-
-
-
-3\.  \*\*Uruchom program\*\*
-
-&nbsp;   Uruchom aplikację poprzez dwukrotne kliknięcie w plik `.exe`.
-
-
+1. Otwórz terminal w **głównym katalogu projektu**.
+2. Wykonaj polecenie:
+   ```bash
+   mvn package
+   ```
+3. Po pomyślnym zakończeniu procesu (komunikat **BUILD SUCCESS**) w katalogu:
+   ```
+   /target
+   ```
+   zostanie utworzony plik:
+   ```
+   AssetManager.exe
+   ```
 
 ---
+
+## Uruchomienie aplikacji
+
+1. Przejdź do katalogu:
+   ```
+   /target
+   ```
+   który został utworzony w głównym folderze projektu.
+2. Znajdź plik:
+   ```
+   AssetManager.exe
+   ```
+3. Uruchom aplikację, dwukrotnie klikając plik `.exe`.
 
